@@ -1,26 +1,30 @@
-/* fonts */
+/***** fonts ********\
+\********************/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
-/* common style or utilittes */
+/******** Common style or utilitte ************\
+\**********************************************/
+
 body{
     font-family: 'Poppins', sans-serif;
     margin: 0;
 }
 
-/* Full Container */
+/******************** Full Container *******************\
+\*******************************************************/
 
 .container{
-    width: 1200px;
-    margin: auto;
     background-color: #f1f1f1ab;
-    padding:50px 30px;
+    padding: 50px 50px;
+    margin: 0% 15%;
 }
 
 main {
     margin-bottom: 100px;
 }
 
-/* header start */
+/****************** header start ********************\
+\****************************************************/
 .top-head{
     display: flex;
     justify-content: space-between;
@@ -35,7 +39,8 @@ nav ul li a{
     color: black;
 }
 
-
+/***********Welcome area************\
+\***********************************/
 .welcome-area{
     display: flex;
     justify-content: space-between;
@@ -54,7 +59,7 @@ nav ul li a{
     margin-top: 50px;
 }
 
-p.space a {
+a.link-btn {
     text-decoration: none;
     background-color: #E02C6D;
     color: #ffffff;
@@ -62,7 +67,20 @@ p.space a {
     padding: 10px 25px;
     border-radius: 30px;
 }
+a.link-btn:hover {
+    background-color: white;
+    color:#E02C6D;
+    transition: 0.2s;
+    border: 1px solid #E02C6D ;
+}
+a.link-btn-last{
+ 
+    color: #E02C6D;
+    font-size: 18px;
+    padding: 10px 25px;
+    border-radius: 30px;
 
+}
 .camera-site img {
     width: 440px;
     height: 410px;
@@ -75,10 +93,10 @@ p.space a {
     width: 430px;
 }
 
-/* All Company Logo Part */
+/****************Company-Identy*******************\
+\*************************************************/
 
 hr{
-    width:1200px;
     border:1px solid rgba(0, 0, 0, 0.075);
     margin: 20px 0px;
 }
@@ -120,6 +138,9 @@ i.fas.fa-star.silver{
     font-size: 14px;
 }
 
+/**************** Popular Collection*****************\
+\****************************************************/
+
 .all-collection{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -137,7 +158,8 @@ i.fas.fa-star.silver{
     font-weight: 700;
 }
 
-/* Feature Products **/
+/**********************Feature Products*************************\
+\***************************************************************/
 
 .feature-items{
     display: grid;
@@ -150,11 +172,11 @@ i.fas.fa-star.silver{
 }
 
 
-/* Footer */
+/**************** Footer Part *******************\
+\************************************************/
 
 footer {
-    width: 1200px;
-    margin:auto;
+    margin:0 15%;
     text-align: center;
     background-color: black;
     color: white;
@@ -169,7 +191,112 @@ footer {
     margin-right: 10px;
     color:white;
 }
+.social-link i:hover{
+    color:#E02C6D;
+}
 
-@media screen {
+/************** Media Query Use ******************\
+\*************************************************/
+
+@media (min-width:602px) and (max-width: 768px) {
+    
+    .container {
+        background-color: #f1f1f1ab;
+        padding: 50px 50px;
+        margin: 0;
+    }
+    nav.menu {
+        text-align: center;
+    }
+    .all-collection {
+        grid-template-columns: repeat(2, 1fr);
+    }
     
 }
+
+
+@media (min-width:280px) and (max-width: 601px) {
+    
+    .container {
+        background-color: #f1f1f1ab;
+        padding: 20px 20px;
+        margin: 0;
+    }
+   /************** Header Part *************\
+   /****************************************/
+    .top-head {
+            display: grid;
+            justify-content: center;
+    }
+    nav.menu {
+        text-align: center;
+    }
+
+    .slogan {
+        text-align: center;
+    }
+    /************** Welcome area **************\
+    \******************************************/
+    .welcome-area {
+        display: grid;
+    }
+    .starting-details h1 {
+        font-size: 28px;
+        line-height: 20px;
+    }
+    .starting-details p.small-para {
+        font-size: 16px;
+        line-height: 25px;
+    }
+    p.small-para {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .starting-details {
+        margin-bottom: 50px;
+    }
+    .camera-site img {
+        width: 340px;
+        height: 310px;
+    }
+    .camera-site {
+        border: 3px solid #F1E4FF;
+        border-radius: 50%;
+        height: 320px;
+        width: 320px;
+        margin: auto;
+    }
+/****************Company-Identy*****************\
+\********************************************************/
+    .all-company-logo {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-items: center;
+    }
+    .all-collection {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+/**********************Feature Products*************************\
+\***************************************************************/
+    .feature-items {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: stretch;
+        justify-content: space-between;
+    }
+    
+    /******************footer part******************\
+    \***********************************************/
+
+    footer {
+        margin:0;
+        text-align: center;
+        background-color: black;
+        color: white;
+        padding: 20px;
+    }
+}
+
